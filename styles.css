@@ -28,7 +28,7 @@ body{
 }
 
 .reverse-anim {
-    animation: flyingText 0.2s ease forwards reverse;
+    animation: flyingTexta 0.2s ease forwards;
 }
 
 @keyframes flyingText {
@@ -37,6 +37,15 @@ body{
   }
   to {
     transform: translateX(1050px);
+  }
+}
+
+@keyframes flyingTexta {
+  from {
+    transform: translateX(1050px);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 
