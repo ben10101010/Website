@@ -25,7 +25,7 @@ body{
   padding-left: 30px;
   color: #d3d2cd; 
   font-family: Barbarian;
-  font-size: 5vw;
+  font-size: 5rem;
 }
 
 .play-anim {
@@ -135,5 +135,9 @@ body{
   margin-left: 3vw;
   margin-right: 3vw;
   font-family: Palyrin;
-  font-size: 3vw;
+  font-size: 3rem;
+}
+
+@media (max-width: 480px) {
+  
 }
