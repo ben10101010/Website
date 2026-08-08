@@ -139,5 +139,18 @@ body{
 }
 
 @media (max-width: 480px) {
-  
+  .text {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    font-family: Palyrin;
+    font-size: 5rem;
+  }
+  .yes {
+    text-align: center;
+    margin: 0;
+    padding-left: 30px;
+    color: #d3d2cd; 
+    font-family: Barbarian;
+    font-size: 10rem;
+  }
 }
