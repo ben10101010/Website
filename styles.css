@@ -143,7 +143,7 @@ body{
     margin-left: 3vw;
     margin-right: 3vw;
     font-family: Palyrin;
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
   .yes {
     text-align: center;
@@ -151,6 +151,21 @@ body{
     padding-left: 30px;
     color: #d3d2cd; 
     font-family: Barbarian;
-    font-size: 7rem;
+    font-size: 1.5rem;
   }
+
+  
+.temp{
+  background-color: #818181;
+  height: 60vw;
+  background-image: url("images/divbackground.jpg");
+}
+
+.temp img {
+  padding-top: 0.3vw;
+  max-height: 59vw;
+  height: auto;
+  display: block;
+  margin: auto;
+}
 }
