@@ -6,12 +6,17 @@ body{
 
 @font-face {
   font-family: Barbarian;
-  src: url("Barbarian.ttf");
+  src: url("fonts/Barbarian.ttf");
 }
 
 @font-face {
   font-family: Grusskarten;
-  src: url("GrusskartenGotisch.ttf");
+  src: url("fonts/GrusskartenGotisch.ttf");
+}
+
+@font-face {
+  font-family: Palyrin;
+  src: url("fonts/Palyrin.otf")
 }
 
 .yes {
@@ -115,6 +120,7 @@ body{
 .temp{
   background-color: #818181;
   height: 400px;
+  background-image: url("images/divbackground.jpg");
 }
 
 .temp img {
@@ -123,4 +129,11 @@ body{
   height: auto;
   display: block;
   margin: auto;
+}
+
+.text{
+  margin-left: 3vw;
+  margin-right: 3vw;
+  font-family: Palyrin;
+  font-size: 3vw;
 }
