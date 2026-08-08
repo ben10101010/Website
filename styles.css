@@ -38,19 +38,19 @@ body{
 
 @keyframes flyingText {
   from {
-    transform: translateX(0);
+    margin-left: 0;
   }
   to {
-    transform: translateX(1050px);
+    margin-left: 71.4vw;
   }
 }
 
 @keyframes flyingTexta {
   from {
-    transform: translateX(1050px);
+    margin-left: 71.4vw;
   }
   to {
-    transform: translateX(0);
+    margin-left: 0;
   }
 }
 
