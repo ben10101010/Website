@@ -19,3 +19,11 @@ function closeNav() {
   text.classList.add("reverse-anim");
 }
 
+(function() {
+    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    link.type = 'image/x-icon';
+    link.rel = 'shortcut icon';
+    link.href = 'https://vickenezik.com/images/favicon.ico';
+    document.getElementsByTagName('head')[0].appendChild(link);
+})();
+
