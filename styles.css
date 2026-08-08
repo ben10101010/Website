@@ -155,17 +155,35 @@ body{
   }
 
   
-.temp{
-  background-color: #818181;
-  height: 60vw;
-  background-image: url("images/divbackground.jpg");
-}
+  .temp{
+    background-color: #818181;
+    height: 60vw;
+    background-image: url("images/divbackground.jpg");
+  }
 
-.temp img {
-  padding-top: 0.3vw;
-  max-height: 59vw;
-  height: auto;
-  display: block;
-  margin: auto;
-}
+  .temp img {
+    padding-top: 0.3vw;
+    max-height: 59vw;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  @keyframes flyingText {
+    from {
+      margin-left: 0;
+    }
+    to {
+      margin-left: 58vw;
+    }
+  }
+
+  @keyframes flyingTexta {
+    from {
+      margin-left: 58vw;
+    }
+    to {
+      margin-left: 0;
+    }
+  }
 }
