@@ -63,17 +63,17 @@ body{
   right: 0;
   background-color: #111; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
+  padding-top: 4.5vw; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   transition-delay: 200ms;
 }
 
 /* The navigation menu links */
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 1vw 1vw 1vw 3vw;
   text-decoration: none;
   font-family: Grusskarten;
-  font-size: 50px;
+  font-size: 4vw;
   color: #818181;
   display: block;
   transition: 0.5s;
@@ -89,7 +89,7 @@ body{
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 36px;
+  font-size: 3vw;
 }
 
 .border {
@@ -113,19 +113,19 @@ body{
 .openNav{
   color: white;
   cursor: pointer;
-  margin-right: 20px;
-  font-size: 36px;
+  margin-right: 1.2vw;
+  font-size: 2.5vw;
 }
 
 .temp{
   background-color: #818181;
-  height: 400px;
+  height: 28.3vw;
   background-image: url("images/divbackground.jpg");
 }
 
 .temp img {
-  padding-top: 4px;
-  max-height: 395px;
+  padding-top: 0.3vw;
+  max-height: 28vw;
   height: auto;
   display: block;
   margin: auto;
