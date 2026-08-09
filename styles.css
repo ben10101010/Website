@@ -4,6 +4,10 @@ body{
   font-synthesis: none;
 }
 
+:root{
+  --swordPosition: '200';
+}
+
 @font-face {
   font-family: Barbarian;
   src: url("fonts/Barbarian.ttf");
@@ -36,7 +40,7 @@ body{
     animation: flyingTexta 0.2s ease forwards;
 }
 
-@keyframes flyingText {
+/*@keyframes flyingText {
   from {
     margin-left: 0;
   }
@@ -52,6 +56,24 @@ body{
   to {
     margin-left: 0;
   }
+}*/
+
+@keyframes flyingText {
+  from {
+    transform: 0;
+  }
+    to {
+      transform: translateX(var(--swordPosition));
+    }
+  }
+ 
+@keyframes flyingTexta {
+  from {
+    transform: translateX(var(--swordPosition));
+  }
+  to {
+    transform: 0;
+  }
 }
 
 .sidenav {
@@ -63,17 +85,17 @@ body{
   right: 0;
   background-color: #111; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 4.5vw; /* Place content 60px from the top */
+  padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   transition-delay: 200ms;
 }
 
 /* The navigation menu links */
 .sidenav a {
-  padding: 1vw 1vw 1vw 3vw;
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-family: Grusskarten;
-  font-size: 4vw;
+  font-size: 60px;
   color: #818181;
   display: block;
   transition: 0.5s;
@@ -89,7 +111,7 @@ body{
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 3vw;
+  font-size: 40px;
 }
 
 .border {
@@ -138,7 +160,8 @@ body{
   font-size: 3rem;
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 700px) {
   .text {
     margin-left: 3vw;
     margin-right: 3vw;
@@ -151,7 +174,7 @@ body{
     padding-left: 30px;
     color: #d3d2cd; 
     font-family: Barbarian;
-    font-size: 1.5rem;
+    
   }
 
   
@@ -169,21 +192,28 @@ body{
     margin: auto;
   }
 
-  @keyframes flyingText {
+  .openNav{
+    color: white;
+    cursor: pointer;
+    margin-right: 1.2vw;
+    font-size: 3vw;
+  }
+
+  /*@keyframes flyingText {
     from {
-      margin-left: 0;
+      transform: 0;
     }
     to {
-      margin-left: 58vw;
+      transform: translateX(var(--swordPosition));
     }
   }
 
   @keyframes flyingTexta {
     from {
-      margin-left: 58vw;
+      transform: translateX(var(--swordPosition));
     }
     to {
-      margin-left: 0;
+      transform: 0;
     }
-  }
+  }*/
 }
