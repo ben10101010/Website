@@ -12,7 +12,6 @@ function openNav() {
     text.classList.remove("reverse-anim");
   }
   text.classList.add("play-anim");
-  document.getElementById("no").textContent = screenWidth;
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
@@ -31,6 +30,7 @@ function closeNav() {
     link.rel = 'shortcut icon';
     link.href = 'https://vickenezik.com/images/favicon.ico';
     document.getElementsByTagName('head')[0].appendChild(link);
+    document.getElementById("no").textContent = window.innerWidth;
 })();
 
 
