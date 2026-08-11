@@ -6,6 +6,7 @@ body{
 
 :root{
   --swordPosition: '200';
+  --swordPositionPhone: '100';
 }
 
 @font-face {
@@ -143,7 +144,7 @@ body{
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .text {
     margin-left: 3vw;
     margin-right: 3vw;
@@ -186,13 +187,13 @@ body{
       transform: 0;
     }
     to {
-      transform: translateX(40px);
+      transform: translateX(var(--swordPositionPhone));
     }
   }
 
   @keyframes flyingTexta {
     from {
-      transform: translateX(40px);
+      transform: translateX(var(--swordPositionPhone));
     }
     to {
       transform: 0;
