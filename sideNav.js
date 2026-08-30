@@ -33,5 +33,12 @@ function closeNav() {
     document.getElementsByTagName('head')[0].appendChild(link);
 })();
 
+const popup = document.querySelector('.popup');
+const openTab = document.querySelector('.projectButton');
+
+
+openTab.onclick = function() {
+  popup.scrollTop = 0;
+}
 
 
