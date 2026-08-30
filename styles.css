@@ -24,6 +24,11 @@ body{
   src: url("fonts/Palyrin.otf")
 }
 
+@font-face {
+  font-family: Gotham;
+  src: url("fonts/Gotham.ttf")
+}
+
 .yes {
   text-align: center;
   margin: 0;
@@ -141,6 +146,16 @@ body{
   margin-right: 3vw;
   font-family: Palyrin;
   font-size: 3rem;
+  margin-top: 1vw;
+}
+
+.header{
+  margin-left: 2vw;
+  font-family: Gotham;
+  font-size: 5rem;
+  margin-top: 2vw;
+  margin-bottom: 0;
+  z-index: 1;
 }
 
 
@@ -199,4 +214,113 @@ body{
       transform: 0;
     }
   }
+}
+
+.projectButton{
+  background-color: #4aa15d;
+  border-radius: 5vw;
+  border: none;
+  color: white;
+  padding: 0.1vw 0.5vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: Grusskarten;
+  font-size: 4rem;
+  margin-left: 1vw;
+  margin-bottom: 3vw;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.projectButton:hover {
+  background-color: #244d2d;
+}
+
+.projects{
+  background-color: #818181;
+  height: auto;
+  background-image: url("images/divbackground.jpg");
+  display: grid;
+  grid-template-columns: max-content 5fr; /* 2 columns */ 
+  grid-template-rows: auto auto; 
+}
+
+.projects .text{
+  margin-top: 0;
+  grid-column: 2;
+  grid-row: 2;
+  line-height: 1.2;
+}
+
+.projects .projectButton{
+  margin-top: 1vw;
+  grid-column: 1;
+  grid-row: 3;
+  z-index: 0;
+}
+
+.projects img {
+  margin-top: 1vw;
+  max-height: 29.5vw;
+  height: auto;
+  margin-left: 1vw;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  border-radius: 3vw;
+  border: 0.5vw solid #4aa15d;
+}
+
+.projectBorder{
+  height: 0.8vw;
+  background-color:#111;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
 }
