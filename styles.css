@@ -38,12 +38,17 @@ body:has(.overlay:target){
   src: url("fonts/TempelGothic.otf")
 }
 
+@font-face {
+  font-family: Gothicum;
+  src: url("fonts/gothicum.ttf")
+}
+
 .yes {
   text-align: center;
   margin: 0;
   padding-left: 30px;
   color: #d3d2cd; 
-  font-family: Barbarian;
+  font-family: Barbarian !important;
   font-size: 5rem;
 }
 
@@ -161,7 +166,7 @@ body:has(.overlay:target){
 .text{
   margin-left: 3vw;
   margin-right: 3vw;
-  font-family: Palyrin;
+  font-family: Palyrin !important;
   font-size: 3rem;
   margin-top: 1vw;
 }
@@ -187,7 +192,7 @@ body:has(.overlay:target){
     margin: 0;
     padding-left: 30px;
     color: #d3d2cd; 
-    font-family: Barbarian;
+    font-family: Barbarian !important;
     font-size: 2rem;
   }
 
@@ -231,31 +236,50 @@ body:has(.overlay:target){
     }
   }
 
-  .projects .header{
-    font-size: 1rem;
-    margin-left: 0;
-  }
-
-  .projects{
-    background-color: #818181;
-    height: auto;
-    background-image: url("images/divbackground.jpg");
-    display: grid;
-    grid-template-columns: max-content 8fr; /* 2 columns */ 
-    grid-template-rows: auto auto; 
-  }
-
-  .projects .text {
+  .projects .text{
     margin-top: 0;
     grid-column: 2;
     grid-row: 2;
-    line-height: 1;
-    font-size: 1rem;
-    font-family: TempelGothic;
-    background: -webkit-linear-gradient(#0c0c0c, #424141);
+    line-height: 1.3;
+    font-size: 1rem !important;
+    font-family: Gothicum !important;
+    background: -webkit-linear-gradient(#000000, #2b2a2a);
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
+
+  .projects .header{
+    font-size: 1.5rem !important;
+  }
+
+  .projectButton{
+    background-color: #4aa15d;
+    border-radius: 5vw;
+    border: none;
+    color: white;
+    padding: 0.1vw 0.5vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Grusskarten !important;
+    font-size: 1rem !important;
+    margin-left: 1vw;
+    margin-bottom: 3vw;
+  }
+}
+
+.projects .header{
+  font-size: 4rem;
+  margin-left: 2vw;
+}
+
+.projects{
+  background-color: #818181;
+  height: auto;
+  background-image: url("images/divbackground.jpg");
+  display: grid;
+  grid-template-columns: max-content 5fr; /* 2 columns */ 
+  grid-template-rows: auto auto; 
 }
 
 .projectButton{
@@ -267,7 +291,7 @@ body:has(.overlay:target){
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-family: Grusskarten;
+  font-family: Grusskarten !important;
   font-size: 4rem;
   margin-left: 1vw;
   margin-bottom: 3vw;
@@ -284,20 +308,20 @@ body:has(.overlay:target){
   height: auto;
   background-image: url("images/divbackground.jpg");
   display: grid;
-  grid-template-columns: max-content 5fr; /* 2 columns */ 
-  grid-template-rows: auto auto; 
+  grid-template-columns: 1fr 5fr; /* 2 columns */ 
+  grid-template-rows: auto 1fr;
 }
 
 .projects .text{
   margin-top: 0;
   grid-column: 2;
   grid-row: 2;
-  line-height: 1;
-  font-size: 3.5rem;
-  font-family: TempelGothic;
-  background: -webkit-linear-gradient(#0c0c0c, #424141);
+  line-height: 1.3;
+  font-size: 2.5rem;
+  font-family: Gothicum !important;
+  background: -webkit-linear-gradient(#000000, #2b2a2a);
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .projects .projectButton{
@@ -353,6 +377,18 @@ body:has(.overlay:target){
   max-height: 85%;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
+  display: grid;
+  grid-template-columns: 1fr 5fr;;
+}
+
+.popup .ndImg {
+  margin-top: 1vw;
+  max-height: 29.5vw;
+  height: auto;
+  margin-left: 1vw;
+  border-radius: 3vw;
+  border: 0.5vw solid #4aa15d;
+  grid-column: 2;
 }
 
 .popup .header{
@@ -360,6 +396,7 @@ body:has(.overlay:target){
   margin-top: 1vw;
   margin-left: 1vw;
   overflow: hidden;
+  grid-column: 1 / span 2;
 }
 
 .popup .close {
@@ -380,6 +417,7 @@ body:has(.overlay:target){
   margin-left: 2vw;
   font-size: 3.5rem;
   line-height: 1;
+  grid-column: 1 / span 2;
 }
 
 .popup img {
@@ -391,5 +429,19 @@ body:has(.overlay:target){
   margin-bottom: 1vw;
   border: 0.5vw solid #4aa15d;
   border-radius: 2vw;
+  grid-column: 1;
+  margin-left: 10vw;
+}
+
+.popup .standAloneImg {
+  max-height: 30vw;
+  height: auto;
+  display: block;
+  margin: auto;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  border: 0.5vw solid #4aa15d;
+  border-radius: 2vw;
+  grid-column: 1 / span 2;
 }
 
