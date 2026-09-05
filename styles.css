@@ -266,6 +266,22 @@ body:has(.overlay:target){
     margin-left: 1vw;
     margin-bottom: 3vw;
   }
+  
+  .popup .text {
+    max-height: 30%;
+    margin-left: 2vw;
+    font-size: 1rem !important;
+    line-height: 1;
+    grid-column: 1 / span 2;
+  }
+
+  .popup .header{
+    font-size: 1.5rem !important;
+    margin-top: 1vw;
+    margin-left: 1vw;
+    overflow: hidden;
+    grid-column: 1 / span 2;
+  }
 }
 
 .projects .header{
