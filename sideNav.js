@@ -9,7 +9,7 @@ function openNav() {
 
   document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("main").style.marginRight = "250px";
-  document.body.style.backgroundColor = "#969595";
+  document.body.style.backgroundColor = "#7f7c7c";
   if (text.classList.contains("reverse-anim")) {
     text.classList.remove("reverse-anim");
   }
@@ -20,7 +20,7 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginRight = "0";
-  document.body.style.backgroundColor = "white";
+  document.body.style.backgroundColor = "#969595";
   text.classList.remove("play-anim");
   text.classList.add("reverse-anim");
 }
