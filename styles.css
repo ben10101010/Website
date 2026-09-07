@@ -250,6 +250,20 @@ body:has(.overlay:target){
     font-size: 3vw;
   }
 
+  .main .text .divide{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    font-size: 1.5rem;
+  }
+
+  .divider {
+    padding-top: 1vw;
+    width: 90vw;
+    display: flex;
+    margin: auto;
+    content: url("images/gothicDividerMobile.png")
+  }
+
   @keyframes flyingText {
     from {
       transform: 0;
