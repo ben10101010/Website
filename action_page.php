@@ -1,5 +1,3 @@
-<?php
-echo "<pre>"; print_r($_POST); echo "</pre>"; die();?>
 
 <html>
 <div>
@@ -52,11 +50,15 @@ echo "<pre>"; print_r($_POST); echo "</pre>"; die();?>
 }
 
 // Usage
-$fname = htmlspecialchars($_POST['fname'] ??'');
-$lname = htmlspecialchars($_POST['lname'] ??'');
-$email = htmlspecialchars($_POST['email'] ??'');
-$subject = htmlspecialchars($_POST['subject'] ??'');
-$msg = "New contact form submission:\nName: $fname $lname\nEmail: $email\nSubject: $subject\n<@717500798317101086>";
+$fname = trim(htmlspecialchars($_POST['fname'] ?? ''));
+$lname = trim(htmlspecialchars($_POST['lname'] ?? ''));
+$email = trim(htmlspecialchars($_POST['email'] ?? ''));
+$subject = trim(htmlspecialchars($_POST['subject'] ?? ''));
+$msg = "New contact form submission:\n";
+$msg .= "Name: ". $fname ."". $lname ."\n";
+$msg .= "Email: ". $email ."\n";
+$msg .= "Subject: ". $subject ."\n";
+$msg .= "<@717500798317101086>";
 $webhookUrl = 'https://discord.com/api/webhooks/1561480875521220649/AD_5dPsy4DxzcMr7jQX4yaHb5i-_c8R3YkMdGXlkMdDAGTb6SgpHvfXy7_MwfF93rCJH';
 sendDiscordMessage($webhookUrl, $msg); ?>
 
