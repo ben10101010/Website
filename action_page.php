@@ -1,3 +1,6 @@
+<?php
+echo "<pre>"; print_r($_POST); echo "</pre>"; die();?>
+
 <html>
 <div>
 <head>
