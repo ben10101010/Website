@@ -53,7 +53,7 @@ $fname = htmlspecialchars($_POST['fname'] ?? '');
 $lname = htmlspecialchars($_POST['lname'] ??'');
 $email = htmlspecialchars($_POST['email'] ??'');
 $subject = htmlspecialchars($_POST['subject'] ??'');
-$msg = "New contact form submission:\nName: $fname $lname\nEmail: $email\nSubject: $subject";
+$msg = "New contact form submission:\nName: $fname $lname\nEmail: $email\nSubject: $subject \n <@717500798317101086>";
 $webhookUrl = 'https://discord.com/api/webhooks/1561480875521220649/AD_5dPsy4DxzcMr7jQX4yaHb5i-_c8R3YkMdGXlkMdDAGTb6SgpHvfXy7_MwfF93rCJH';
 sendDiscordMessage($webhookUrl, $msg); ?>
 
