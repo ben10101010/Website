@@ -22,7 +22,7 @@ Your email address is: <?php echo $_POST["email"]; ?>
 }
 
 // Usage
-$webhookMessage = $_POST["fname"] + " " + $_POST["lname"] + "\n" + $_POST["email"] + "\n" + $_POST["subject"];
+//$webhookMessage = $_POST["fname"] + " " + $_POST["lname"] + "\n" + $_POST["email"] + "\n" + $_POST["subject"];
 $webhookUrl = 'https://discord.com/api/webhooks/1561480875521220649/AD_5dPsy4DxzcMr7jQX4yaHb5i-_c8R3YkMdGXlkMdDAGTb6SgpHvfXy7_MwfF93rCJH';
 sendDiscordMessage($webhookUrl, 'Hello from PHP!'); ?>
 
