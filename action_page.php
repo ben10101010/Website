@@ -50,14 +50,14 @@
 }
 
 // Usage
-$fname   = htmlspecialchars($_POST['fname'] ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-$lname   = htmlspecialchars($_POST['lname'] ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-$email   = htmlspecialchars($_POST['email'] ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-$subject = htmlspecialchars($_POST['subject'] ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+$fname = trim($_POST['fname'] ?? '');
+$lname = trim($_POST['lname'] ?? '');
+$email = trim($_POST['email'] ?? '');
+$subject = trim($_POST['subject'] ?? '');
 $msg = "New contact form submission:\n";
-$msg .= "Name: ". trim($fname) ." ". trim($lname) ."\n";
-$msg .= "Email: ". trim($email) ."\n";
-$msg .= "Subject: ". trim($subject) ."\n";
+$msg .= "Name: ". $fname ."". $lname ."\n";
+$msg .= "Email: ". $email ."\n";
+$msg .= "Subject: ". $subject ."\n";
 $msg .= "<@717500798317101086>";
 $webhookUrl = 'https://discord.com/api/webhooks/1561480875521220649/AD_5dPsy4DxzcMr7jQX4yaHb5i-_c8R3YkMdGXlkMdDAGTb6SgpHvfXy7_MwfF93rCJH';
 sendDiscordMessage($webhookUrl, $msg); ?>
