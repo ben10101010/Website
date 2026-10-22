@@ -49,6 +49,16 @@
     return $httpCode >= 200 && $httpCode < 300;
 }
 
+$env_path = dirname(__DIR__) . '/.env'; 
+
+if (file_exists($env_path)) {
+    $lines = file($env_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        if (strpos(trim($line), '#') === 0) continue; // Skip comments
+        list($name, $value) = explode('=', $line, 2);
+        $_ENV[trim($name)] = trim($value, '"\' ');
+    }
+}
 
 // Usage
 $fname = trim($_POST['fname'] ?? '');
@@ -60,9 +70,7 @@ $msg .= "Name: ". $fname ."". $lname ."\n";
 $msg .= "Email: ". $email ."\n";
 $msg .= "Subject: ". $subject ."\n";
 $msg .= "<@717500798317101086>";
-$webhookUrl = "webhookurl";
-
-$conn = new mysqli($webhookUrl);
+$webhookUrl = $_ENV['webhookURL'];
 
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
