@@ -50,11 +50,6 @@
 }
 
 
-$dotevn = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotevn->load();
-
-$dotevn->required(['webhookURL']);
-
 // Usage
 $fname = trim($_POST['fname'] ?? '');
 $lname = trim($_POST['lname'] ?? '');
@@ -65,7 +60,10 @@ $msg .= "Name: ". $fname ."". $lname ."\n";
 $msg .= "Email: ". $email ."\n";
 $msg .= "Subject: ". $subject ."\n";
 $msg .= "<@717500798317101086>";
-$webhookUrl = $_ENV['webhookURL'];
+$webhookUrl = "webhookurl";
+
+$conn = new mysqli($webhookUrl);
+
 sendDiscordMessage($webhookUrl, $msg); ?>
 
 </div>
