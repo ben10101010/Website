@@ -72,8 +72,6 @@ $msg .= "Subject: ". $subject ."\n";
 $msg .= "<@717500798317101086>";
 $webhookUrl = $_ENV['webhookURL'];
 
-echo $webhookUrl;
-
 sendDiscordMessage($webhookUrl, $msg); ?>
 
 </div>
