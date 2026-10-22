@@ -62,12 +62,14 @@ $msg .= "Subject: ". $subject ."\n";
 $msg .= "<@717500798317101086>";
 $webhookUrl = "webhookurl";
 
+$conn = new mysqli($webhookUrl);
+
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 echo "Connected successfully";
 
-$conn = new mysqli($webhookUrl);
+
 
 sendDiscordMessage($webhookUrl, $msg); ?>
 
