@@ -34,11 +34,15 @@
     <p class="header">Macro Keyboard</p>
     <a class="projectButton" id="projectbtn" href="#project1">View Project</a>
 
-    <p class="text">One of my earlier projects. I thought of this idea after seeing
-        inspiration on Instagram where I saw tiny keyboards that could run any command.
-        I did not want to buy one, therefore I made my own.
+    <p class="text">
+        Year of Creation: 2023<br><br>
+        
+        While browsing through instagram, I came across a video
+        of a tiny keyboard that had strange buttons on it. Those 
+        buttons were able to perform specific commands and It
+        intrigued me. I decided to make my own version of it.
     </p>
-</div>
+</div> 
 
 <div id="project1" class="overlay">
 	<div class="popup">
@@ -49,7 +53,10 @@
             keyboard switches, a Raspberry Pico, and a compatible kit that let me easily wire
             a breadboard to the Raspberry Pico. Then I soldered all of the voltage inputs on 
             the switches together and connected it to the negative input on the Pico. Next, I
-            soldered wires to the inputs and plugged them into the breadboard. 
+            soldered wires to the inputs and plugged them into the breadboard. It took me a while
+            to figure this out since I did not know how to read signals from the switches. I had
+            mistakenly connected the voltage inputs to ground, but once I figured it out, It was
+            easy work from
         </div>
 
         <img src="images/macroSoldering.jpg" alt="Favicon">
@@ -77,7 +84,7 @@
 
 <div class="projects">
     <img src="images/Vicken.jpg" alt="Favicon">
-    <p class="header">Project Example 2</p>
+    <p class="header">Project Example</p>
     <a class="projectButton" id="projectbtn" href="#project2">View Project</a>
 
     <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -86,6 +93,42 @@
      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
      occaecat</p>
+</div>
+
+<div id="project2" class="overlay">
+	<div class="popup">
+		<h2 class="header">Macro Keyboard</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="text">
+			I started by taking a trip to Microcenter. I bought a set of replacement mechanical
+            keyboard switches, a Raspberry Pico, and a compatible kit that let me easily wire
+            a breadboard to the Raspberry Pico. Then I soldered all of the voltage inputs on 
+            the switches together and connected it to the negative input on the Pico. Next, I
+            soldered wires to the inputs and plugged them into the breadboard. It took me a while
+            to figure this out since I did not know how to read signals from the switches. I had
+            mistakenly connected the voltage inputs to ground, but once I figured it out, It was
+            easy work from there.
+        </div>
+
+        <img src="images/macroSoldering.jpg" alt="Favicon">
+        <img class="ndImg" src="images/macroExposed.jpg" alt="Favicon">
+        <img class="standAloneImg" src="images/macroConnected.jpg" alt="Favicon">
+
+        <div class="text"> 
+            After connecting it, I connected it to my computer and started programming.
+            Using python and the Adafruit HID Library, I programmed the Pico to send
+            commands based on specific key strokes. With 24 keys, I can program well over
+            ten thousands commands. I have set up a couple of them, such as opening
+            a specific video link, opening command prompt, turning off wifi, etc. 
+            It's fun to use and can be pretty useful at times. Recently, I added a 
+            potentiometer to change the keyboard layout. It allows me to switch between
+            commands and ASCII. Just by turning the knob, I can now either open shortcuts
+            or type out special characters. 
+        </div>
+
+		
+        
+	</div>
 </div>
 
 </div>

@@ -49,6 +49,12 @@
     return $httpCode >= 200 && $httpCode < 300;
 }
 
+
+$dotevn = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotevn->load();
+
+$dotevn->required(['webhookURL']);
+
 // Usage
 $fname = trim($_POST['fname'] ?? '');
 $lname = trim($_POST['lname'] ?? '');
@@ -59,7 +65,7 @@ $msg .= "Name: ". $fname ."". $lname ."\n";
 $msg .= "Email: ". $email ."\n";
 $msg .= "Subject: ". $subject ."\n";
 $msg .= "<@717500798317101086>";
-$webhookUrl = 'https://discord.com/api/webhooks/1561480875521220649/AD_5dPsy4DxzcMr7jQX4yaHb5i-_c8R3YkMdGXlkMdDAGTb6SgpHvfXy7_MwfF93rCJH';
+$webhookUrl = $_ENV['webhookURL'];
 sendDiscordMessage($webhookUrl, $msg); ?>
 
 </div>
