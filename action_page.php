@@ -57,27 +57,23 @@ if (file_exists($env_path)) {
         if (strpos(trim($line), '#') === 0) continue; // Skip comments
         list($name, $value) = explode('=', $line, 2);
         $_ENV[trim($name)] = trim($value, '"\' ');
+        echo $line;
     }
+    echo "yes";
 }
-
 // Usage
 $fname = trim($_POST['fname'] ?? '');
 $lname = trim($_POST['lname'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $subject = trim($_POST['subject'] ?? '');
 $msg = "New contact form submission:\n";
-$msg .= "Name: ". $fname ."". $lname ."\n";
+$msg .= "Name: ". $fname ." ". $lname ."\n";
 $msg .= "Email: ". $email ."\n";
 $msg .= "Subject: ". $subject ."\n";
 $msg .= "<@717500798317101086>";
 $webhookUrl = $_ENV['webhookURL'];
 
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-echo "Connected successfully";
-
-
+echo $webhookUrl;
 
 sendDiscordMessage($webhookUrl, $msg); ?>
 
