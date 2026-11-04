@@ -462,6 +462,7 @@ body:has(.overlay:target){
   border-radius: 3vw;
   border: 0.5vw solid #4aa15d;
   grid-column: 2;
+  max-width: 20vw;
 }
 
 .popup .header{
@@ -498,6 +499,7 @@ body:has(.overlay:target){
 
 .popup img {
   max-height: 30vw;
+  max-width: 20vw;
   height: auto;
   display: block;
   margin: auto;
@@ -511,6 +513,7 @@ body:has(.overlay:target){
 
 .popup .standAloneImg {
   max-height: 30vw;
+  max-width: 30vw;
   height: auto;
   display: block;
   margin: auto;
