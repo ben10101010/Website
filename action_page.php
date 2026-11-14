@@ -65,10 +65,10 @@ $fname = trim($_POST['fname'] ?? '');
 $lname = trim($_POST['lname'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $subject = trim($_POST['subject'] ?? '');
-$msg = "New contact form submission:\n";
-$msg .= "Name: ". $fname ." ". $lname ."\n";
-$msg .= "Email: ". $email ."\n";
-$msg .= "Subject: ". $subject ."\n";
+$msg = "__New contact form submission:__\n";
+$msg .= "**Name**: ". $fname ." ". $lname ."\n";
+$msg .= "**Email**: ". $email ."\n";
+$msg .= "**Subject**: ". $subject ."\n";
 $msg .= "<@717500798317101086>";
 $webhookUrl = $_ENV['webhookURL'];
 
